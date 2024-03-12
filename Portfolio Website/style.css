@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+}
+
+#loader {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    color: #fff;
+}
+
+#loader #topheading {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#topheading h5 {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#loader h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-weight: 500;
+    /* background-color: red; */
+}
+
+#loader h1 span {
+    color: #14CF93;
+    font-family: "Lobster", sans-serif;
+}
+
+
+
+.reveal .parent {
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* background-color: red; */
+    overflow-y: hidden;
+}
+
+.reveal .parent .child {
+    display: block;
+    /* transform: translateY(50%); */
+}
+
+.child span {
+    display: inline-block;
+}
+
+#green {
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #14CF93;
+}
+
+#home {
+    width: 100%;
+    height: 200vh;
+    background-color: #f3f3f3;
+    /* position: absolute;
+    top: 100vh; */
+}
+
+#home #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.15vw;
+    /* background-color: red; */
+    height: 100px;
+    width: 100%;
+    /* position: fixed; */
+}
+
+#nav a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#nav a:hover {
+    color: #14CF93;
+}
+
+#homecaption {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+    font-size: 160px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin-top: -7%;
+   
+}
+
+#creative {
+    margin-left: -50%;
+}
+
+#visual {
+    color: #14CF93;
+    font-size: 120px;
+}
+
+#projects{
+    width: 200%;
+    height: 100vh;
+    background-color: #333030;
+    padding: 2%;
+    display: flex;
+    gap: 8%;
+    /* padding: 10%; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project_title {
+    text-align: center;
+    font-size: 51px;
+    color: #14CF93;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-wrap: nowrap;
+}
+
+.project {
+    border: 1px solid #fff;
+    height: 65%;
+    width: 25%;
+    padding: 3%;
+    background-color: #14CF93;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img {
+    margin-top: 1%;
+}
+
+.project p {
+    text-align: justify;
+}
+
+.project a {
+    text-decoration: none;
+    color: #000;
+    padding: 3%;
+    border-radius: 22px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.project a:hover {
+    background-color: #333030;
+    color: #f3f3f3;
+}
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border: 1px solid #fff;
+    height: 65%;
+    width: 25%;
+    padding: 3%;
+    background-color: #14CF93;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    flex-direction: column;
+    /* text-align: center; */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-front {
+    /* text-align: center; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* gap: 6%; */
+    flex-direction: column;
+  }
+
+  
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* gap: 6%; */
+    flex-direction: column;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* gap: 6%; */
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    padding: 3%;
+    border-radius: 22px;
+
+    transform: rotateY(180deg);
+  }
+
+  /* .social_wrap {
+    background-color: #14CF93;
+    padding: 2%;
+  } */
+
+  .socials_title {
+    color: #14CF93;
+    font-size: 46px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 80%;
+  }
+
+#socials {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #14CF93; */
+    gap: 3%;
+    
+}
+#socials a {
+    font-size: 33px;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
+#socials img {
+    width: 20%;
+}
+
+.social{
+    border: 1px solid #000;
+    border-radius: 22px;
+    padding: 1%;
+}
+
+.contact_title {
+    color: #14CF93;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 1% 0;
+}
+
+.contact_form {
+    width: 100%;
+    height: 100vh;
+    background-color: #14CF93;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+form {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 22px;
+
+}
+
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f3f3f3;
+    font-size: 16px;
+}
+
+form button {
+    font-size: 18px;
+    padding: 15px;
+    color: #f3f3f3;
+    background-color: #14CF93;
+    border: 0;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 40%;
+    margin: 3% auto 0;
+    border-radius: 30px;
+}
